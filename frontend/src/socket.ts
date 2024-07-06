@@ -1,6 +1,6 @@
 import { io } from "socket.io-client"
 
-export const initalizingSokcet = async() =>{
+export const initalizingSokcet = async () => {
     const options = {
         'force new connection': true,
         reconnectionAttempt: 'Infinity',
@@ -8,5 +8,5 @@ export const initalizingSokcet = async() =>{
         transports: ['websocket'],
     }
 
-    return io("http://localhost:8080", options);
+    return io("https://backend-code-4nwl.onrender.com", options);
 }

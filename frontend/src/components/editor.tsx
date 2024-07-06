@@ -91,7 +91,7 @@ export const Editor = ({ socketRef, roomId, onCodeChange }: EditorProps) => {
             const code = editorRef.current.getValue();
 
             try {
-                const response = await axios.post('http://localhost:8080/api/v1/room/execute', { code });
+                const response = await axios.post('https://backend-code-4nwl.onrender.com/api/v1/room/execute', { code });
                 const output = response.data.output;
                 setOutput(output);
 
